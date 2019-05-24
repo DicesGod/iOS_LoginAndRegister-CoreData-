@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1zd-dc-hJR" customClass="RegisterView" customModule="c01" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gl5-84-Fmv">
+                    <rect key="frame" x="8" y="52" width="284" height="144"/>
+                    <subviews>
+                        <textField opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWp-jS-lHp">
+                            <rect key="frame" x="0.0" y="0.0" width="284" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wji-ch-bI6">
+                            <rect key="frame" x="0.0" y="38" width="284" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                        </textField>
+                        <textField opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ta-TV-SBs">
+                            <rect key="frame" x="0.0" y="76" width="284" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a73-ZT-oJj">
+                            <rect key="frame" x="0.0" y="114" width="284" height="30"/>
+                            <state key="normal" title="Register"/>
+                            <connections>
+                                <action selector="register:" destination="1zd-dc-hJR" eventType="touchUpInside" id="kcF-o6-Cx1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" tag="24" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ8-Qe-o5M">
+                    <rect key="frame" x="8" y="204" width="284" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gl5-84-Fmv" firstAttribute="leading" secondItem="dIz-Ph-qgQ" secondAttribute="leading" constant="8" id="0R7-8K-7f1"/>
+                <constraint firstItem="VZ8-Qe-o5M" firstAttribute="top" secondItem="gl5-84-Fmv" secondAttribute="bottom" constant="8" symbolic="YES" id="0ft-5C-uFe"/>
+                <constraint firstItem="dIz-Ph-qgQ" firstAttribute="trailing" secondItem="gl5-84-Fmv" secondAttribute="trailing" constant="8" id="56Q-q6-X8A"/>
+                <constraint firstItem="VZ8-Qe-o5M" firstAttribute="leading" secondItem="dIz-Ph-qgQ" secondAttribute="leading" constant="8" id="75k-y7-aHt"/>
+                <constraint firstAttribute="trailing" secondItem="VZ8-Qe-o5M" secondAttribute="trailing" constant="8" id="AUI-Fr-t6d"/>
+                <constraint firstItem="gl5-84-Fmv" firstAttribute="top" secondItem="dIz-Ph-qgQ" secondAttribute="top" constant="8" id="kml-2u-2oF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="dIz-Ph-qgQ"/>
+            <connections>
+                <outlet property="confirm" destination="5Ta-TV-SBs" id="Xc1-3O-opy"/>
+                <outlet property="password" destination="wji-ch-bI6" id="CJM-ef-hXH"/>
+                <outlet property="status" destination="VZ8-Qe-o5M" id="dM9-c8-e6W"/>
+                <outlet property="username" destination="BWp-jS-lHp" id="q0Z-ZX-PvY"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+        </view>
+    </objects>
+</document>
